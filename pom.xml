@@ -13,6 +13,7 @@
         <module>grpc-server</module>
         <module>gateway</module>
         <module>soap-client</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
