@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gw="http://gateway.dsassignment.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gw:checkAvailability>
+            <hotelId>H1</hotelId>
+            <roomType>DOUBLE</roomType>
+            <checkIn>2026-12-01</checkIn>
+            <checkOut>2026-12-05</checkOut>
+        </gw:checkAvailability>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gw="http://gateway.dsassignment.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gw:cancelBooking>
+            <bookingId>PASTE-A-REAL-BOOKING-ID-HERE</bookingId>
+        </gw:cancelBooking>
+    </soapenv:Body>
+</soapenv:Envelope>
