@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package hotelbooking;
+
+option java_package = "com.dsassignment.grpc";
+option java_multiple_files = true;
+option java_outer_classname = "HotelBookingProto";
+
+service HotelBookingService {
+  rpc CheckAvailability (AvailabilityRequest) returns (AvailabilityResponse);
+  rpc BookRoom (BookingRequest) returns (BookingResponse);
+  rpc CancelBooking (CancelRequest) returns (CancelResponse);
+}
+
+message AvailabilityRequest {
+  string hotel_id = 1;
+  string room_type = 2;
+  string check_in = 3;
+  string check_out = 4;
+}
+
+message AvailabilityResponse {
+  bool available = 1;
+  int32 rooms_available = 2;
+  double price_per_night = 3;
+}
+
+message BookingRequest {
+  string hotel_id = 1;
+  string room_type = 2;
+  string check_in = 3;
+  string check_out = 4;
+  string guest_name = 5;
+}
+
+message BookingResponse {
+  string booking_id = 1;
+  string status = 2;
+  double total_price = 3;
+}
+
+message CancelRequest {
+  string booking_id = 1;
+}
+
+message CancelResponse {
+  bool success = 1;
+  string message = 2;
+}
